@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pizzaology | Payment</title>
+    <link href='pizzalog.png' rel='icon' type='image/x-icon'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- library validate -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/cart.js"></script>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h2>Pizzaology</h2>
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="specialOffers.html">Special Offers</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </header>
+<div class="cart-page">
+    <h1>Payment</h1>
+    <div class="option-buttons">
+        <button class="delbtn" onclick="selectedDel()">Delivery</button>
+        <button class="tabtn" onclick="selectedTA()">Take-Away</button>
+    </div><br><br>
+<div class="delivery">
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form id="validate" class="formcart" action="javascript:void(0);" name="myForm">
+                <div class="row">
+                    <div class="col-50">
+                        <h3>Billing Address</h3>
+                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                        <input type="text" id="fname" name="fullname" placeholder="Ansh Kumar" required>
+                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                        <input type="text" id="email" name="email" placeholder="ansh.kumar17@gmail.com" required>
+                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                        <input type="text" id="adr" name="address" placeholder="A-22-3, Sri Alam Condo, Shah Alam, 110 W. 15th KL" required>
+                        <label for="city"><i class="fa fa-institution"></i> City</label>
+                        <input type="text" id="city" name="city" placeholder="Kuala Lumpur" required>
+
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state" placeholder="Kuala Lumpur" required>
+                            </div>
+                            <div class="col-50">
+                                <label for="zip">Zip</label>
+                                <input type="text" id="zip" name="zip" placeholder="12000" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-50">
+                        <h3>Payment</h3>
+                        <label for="fname">Accepted Cards</label>
+                        <div class="icon-container">
+                            <i class="fa fa-cc-visa"></i>
+                            <i class="fa fa-cc-amex"></i>
+                            <i class="fa fa-cc-mastercard"></i>
+                            <i class="fa fa-cc-discover"></i>
+                        </div>
+
+                        <label for="cname">Name on Card</label>
+                        <input type="text" id="cname" name="cardname" placeholder="ANSH KRISHNA KUMAR">
+                        <label for="ccnum">Credit card number</label>
+                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <label for="expmonth">Exp Month</label>
+                        <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="expyear">Exp Year</label>
+                                <input type="text" id="expyear" name="expyear" placeholder="2021">
+                            </div>
+                            <div class="col-50">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="352">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Confirm" class="btn" onclick="validation(), errormsg();">
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<footer>
+    <div class="wrapper">
+      <small>©2021 <strong>PIZZAOLOGY</strong>, All Rights Reserved</small>
+      <nav class="footer-nav">
+        <a href="#" class="gototop">Back to Top</a>
+        <a href="specialOffers.html">Promotions</a>
+        <a href="contactus.html">Contact us</a>
+      </nav>
+    </div>
+</footer>   
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        function validation(){
+            swal("Order Placed!", "Your order will be ready in 30-45 minutes", "success");
+        }
+        function selectedDel(){
+            swal("Mode : Delivery", "", "success");
+        }
+        function selectedTA(){
+            swal("Mode : Take-Away", "", "success");
+        }
+        function errormsg(){
+                var a = document.forms["myForm"]["fullname"].value;
+                var b = document.forms["myForm"]["address"].value;
+                var c = document.forms["myForm"]["email"].value;
+                var d = document.forms["myForm"]["city"].value;
+                var e = document.forms["myForm"]["state"].value;
+                var f = document.forms["myForm"]["zip"].value;
+                var g = document.forms["myForm"]["cardname"].value;
+                var h = document.forms["myForm"]["cardnumber"].value;
+                var i = document.forms["myForm"]["expmonth"].value;
+                var j = document.forms["myForm"]["cvv"].value;
+                var k = document.forms["myForm"]["expyear"].value;
+    
+                if(a == "" || b == "" || c == "" || d == "" || e == "" || f == "" || g == "" || h == "" || i == "" || j == "" || k == ""){
+                    swal({
+      icon: 'error',
+      title: 'Enter all fields',
+      text: 'Please enter all fields',
+      
+    })
+                }
+    
+            }
+       
+    </script>
+  
+</body>
+</html>

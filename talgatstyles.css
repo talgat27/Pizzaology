@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Staatliches&display=swap');
+
+:root{
+  --dark-color: #348374;
+  --blue-solid: #06f0c5;
+  --blue-transparent: #b3d9ff;
+  --transparant-alt: rgba(70, 253, 238, 0.123);
+  --blue-light: #74c7b8;
+  --white-solid: #ffffff;
+  --black: white;
+  --new: green;
+  --gradient-color: linear-gradient(to right, var(--new), var(--black));
+  --gradient-alt: linear-gradient(to right, var(--blue-light), var(--blue-transparent));
+  --slate-color: rgb(16,24,50);
+  --blue-color: #00bcdd;
+  --pink-color: #ff00ff;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Staatliches', cursive;
+  color: #444444;background-image: var(--gradient-alt);
+}
+
+section {
+  padding: 60px 0;
+  font-family: 'Staatliches', cursive;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  margin: 15px 0 0 0;
+  font-size: 7rem;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+
+.section-title p {
+  margin: 15px auto 0 auto;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 1024px) {
+  .section-title p {
+    width: 50%;
+  }
+}
+.contact{
+  padding-top: 100px; background: var(--gradient-alt);
+}
+
+.contact .info-wrap {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.contact .info {
+  background: #fff;
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #ffb03b;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #fff6e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #433f39;
+}
+
+.contact .info p {
+  padding: 0 0 0 60px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #7a7368;
+}
+
+.contact .info:hover i {
+  background: #ffb03b;
+  color: #fff;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gradient-alt);
+  font-size: 2em;
+  color: white;
+  border-bottom: 3px solid black;
+}
+
+header .logo{
+  position: relative;
+  max-width: 80px;
+}
+
+header ul{
+  position: relative;
+  display: flex;
+}
+
+header ul li{
+  list-style: none;
+}
+
+header ul li a{
+  display: inline-block;
+  color: #333;
+  font-weight: 400;
+  margin-left: 40px;
+  text-decoration: none;
+}
+header h2{
+  border-radius: 50%; height: 60px; width: 300px;background-color: red;text-align: center; padding-top: .1rem; font-size: 1.5em; font-family: 'Staatliches', cursive;
+}
+
+.headingmap{
+  text-align: center;
+  font-size: 2.5rem;
+  text-decoration: underline;
+  color: black;
+}
+
+footer {
+  background: url('https://orange.codeberryschool.com/content/images/project-assets/simple-footer.png') repeat center;
+  display: table;
+  width: 100%;
+  height: 8rem;
+  text-align: center;
+  font-size: .875rem;
+}
+
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+footer small {
+  color: #ccc;
+  letter-spacing: .025rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #ef4f4f;
+  margin: 0 .5rem;
+  display: inline-block;
+}
+
+.footer-nav a:hover {
+  color: #f26896;
+  transition: color .15s ease-in-out;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.gototop{
+  width: 70px;
+  height: 50px;
+  bottom: 40px;
+  right: 50px;
+}
+
+.map1{
+  border:3px solid green; 
+  width: 100%; 
+  height: 350px;
+}
+
+.container.mt-5{
+  background: white;
+}

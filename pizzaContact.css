@@ -1,0 +1,328 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Staatliches&display=swap');
+:root{
+    --dark-color: #348374;
+    --blue-solid: #06f0c5;
+    --blue-transparent: #b3d9ff;
+    --transparant-alt: rgba(70, 253, 238, 0.123);
+    --blue-light: #74c7b8;
+    --white-solid: #ffffff;
+    --black: white;
+    --new: green;
+    --gradient-color: linear-gradient(to right, var(--new), var(--black));
+    --gradient-alt: linear-gradient(to right, var(--blue-light), var(--blue-transparent));
+    --slate-color: rgb(16,24,50);
+    --blue-color: #00bcdd;
+    --pink-color: #ff00ff;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Staatliches', cursive;
+}
+section
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    background: var(--gradient-alt);
+    padding-bottom: 80px;
+    padding-right: 150px;
+}
+.title{
+    font-size: 7em; background: var(--gradient-alt); text-align: center;
+}
+
+section .container
+{
+    position: relative;
+    min-width: 1350px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    padding-left: 50px;
+}
+section .container .contactinfo
+{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100%-80px);
+    background: red;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Lato', sans-serif;
+}
+section .container .contactinfo h2
+{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+section .container .contactinfo .info
+{
+    position: relative;
+    margin: 20px 0;
+}
+section .container .contactinfo .info li
+{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+section .container .contactinfo .info li span:nth-child(1)
+{
+    width: 30px;
+    min-width: 30px;
+}
+section .container .contactinfo .info li span:nth-child(1) img
+{
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+}
+section .container .contactinfo .info li span:nth-child(2)
+{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+section .container .contactinfo .info li:hover span:nth-child(1) img,
+section .container .contactinfo .info li:hover span:nth-child(2)
+{
+    opacity: 1;
+}
+section .container .contactinfo .sci
+{
+    position: relative;
+    display: flex;
+}
+section .container .contactinfo .sci li
+{
+    list-style: none;
+    margin-right: 15px;
+}
+section .container .contactinfo .sci li a
+{
+    text-decoration: none;
+}
+section .container .contactinfo .sci li a img
+{
+    filter: invert(1);
+    opacity: 0.5;
+    width: 50px;
+    margin-top: 33px;
+}
+section .container .contactinfo .sci li:hover a img
+{
+    opacity: 1;
+}
+section .container .contactForm
+{
+    position: absolute;
+    display: inline;
+    padding: 70px 50px;
+    background: #fff;
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100% - 150px);
+    height: 100%;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+}
+section .container .contactForm h2
+{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+section .container .contactForm .formBox
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+section .container .contactForm .formBox .inputBox
+{
+    position: relative;
+    margin: 0 0 35px 0;
+}
+section .container .contactForm .formBox .inputBox.w50
+{
+    width: 47%;
+}
+section .container .contactForm .formBox .inputBox.w100
+{
+    width: 100%;
+}
+section .container .contactForm .formBox .inputBox input,
+section .container .contactForm .formBox .inputBox textarea
+{
+    width: 100% !important;
+    padding: 5px 0;
+    resize: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+section .container .contactForm .formBox .inputBox textarea
+{
+    min-height: 120px;
+}
+section .container .contactForm .formBox .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    transition: 0.5s;
+    pointer-events: none;
+}
+section .container .contactForm .formBox .inputBox input:focus ~ span,
+section .container .contactForm .formBox .inputBox textarea:focus ~ span,
+section .container .contactForm .formBox .inputBox input:valid ~ span,
+section .container .contactForm .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ff568c;
+}
+section .container .contactForm .formBox .inputBox input[type="submit"]
+{
+    position: relative;
+    cursor: pointer;
+    background: #0f3959;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+
+#wrapper
+{
+    margin: 38.5px 0 0;
+}
+table {
+    border: 0; width: 600px;
+    border-spacing: 0; background: black;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-right: 10px;
+display: inline;}
+td, th {border: 0; font-family: 'Lato', sans-serif; 
+    padding: 10px 10px 10px 10px;
+color: black;
+}
+caption {font-family: 'Staatliches', cursive;
+    font-weight: bold; font-size: 1.2em;
+    padding-bottom: 0.5em; color: black;}
+tr:first-of-type{background-color: red; color: black;}
+
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--gradient-alt);
+    font-size: 2em;
+    color: white;
+    border-bottom: 3px solid black;
+}
+
+header .logo{
+    position: relative;
+    max-width: 80px;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    display: inline-block;
+    color: #333;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+header h2{
+    border-radius: 50%; height: 60px; width: 300px;background-color: red; padding-left: 3.5rem;
+}
+footer {
+    background: url('https://orange.codeberryschool.com/content/images/project-assets/simple-footer.png') repeat center;
+    display: table;
+    width: 100%;
+    height: 8rem;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: .875rem;
+  }
+  
+  .wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  footer small {
+    color: #ccc;
+    letter-spacing: .025rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    color: #ef4f4f;
+    margin: 0 .5rem;
+    display: inline-block;
+  }
+  
+  .footer-nav a:hover {
+    color: #f26896;
+    transition: color .15s ease-in-out;
+  }
+  
+  strong {
+    font-weight: 700;
+  }
+
+  .gototop{
+    width: 70px;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+  }
+
+  .tableinfo{
+    background: var(--gradient-alt); text-align: center;
+  }
